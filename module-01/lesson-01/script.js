@@ -46,8 +46,8 @@ console.log("🚀 ~ elementOut10:", elementOut10);
 
 //11
 const elementOut11 = document.querySelector(".out-11");
-elementOut10.innerHTML = "123";
-elementOut10.innerHTML += "456";
+elementOut11.innerHTML = "123";
+elementOut11.innerHTML += "456";
 
 //12
 const a = document.querySelector(".out-12");
@@ -94,8 +94,8 @@ console.log(Out18);
 //19
 let Out19 = document.querySelector(".out-19");
 console.log("🚀 ~ Out19:", Out19);
-Out19.textContent = "out-19-test";
-console.log("🚀 ~ Out19:", Out19);
+let Out192 = 10; //приклад
+console.log("🚀 ~ Out192:", Out192)
 
 //20
 const Out20 = document.querySelector(".out-20");

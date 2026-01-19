@@ -3,103 +3,42 @@
 const a = 7;
 const b = 9;
 const result = a * b;
-console.log("🚀 ~ result:", result)
-
-
-//2
-const out2 = document.querySelector(".out-2");
-const c = 7;
-const d = 9;
-out2.textContent = c / d;
-console.log("🚀 ~ out2:", out2)
-
-//3
-const e = 3; 
-const f = 5; 
-const out3 = document.querySelector(".out-3");
-out3.textContent = e + f;
-console.log(out3)
-
-//4
-const e1 = '3'; 
-const f1 = 5;
-const out4= document.querySelector(".out-4");
-out4.textContent = e1 + f1;
-console.log("🚀 ~ out4:", out4)
-
-//5
-const e2 = 3;
-const f2 = 0;
-const out5 = document.querySelector(".out-5");
-console.log("🚀 ~ out5:", out5);
-out5.textContent = e2 / f2;
-
-//6
-const e3 = 3;
-const f3 = "Hello";
-const out6 = document.querySelector(".out-6");
-out6.textContent = e3 + f3;
-console.log("🚀 ~ out6:", out6)
-
-//7
-const e4 = 3;
-const f4 = "Hello";
-const out7 = document.querySelector(".out-7");
-out7.textContent = e4 * f4;
-console.log("🚀 ~ out7:", out7)
-
-
-//8
-const btn8 = document.querySelector(".b-8");
-const input8 = document.querySelector(".i-8");
-const out8 = document.querySelector(".out-8");
-console.log("🚀 ~ out8:", out8)
-
-btn8.onclick = fn8;
-
-function fn8() {
-  console.log((out8.textContent = input8.value));
-  out8.textContent = input8.value;
-  input8.value = "";
-}
-
-
-
-
-
-
-це треба перевирішити 
-
-
-
-//222222222222222222222222222222 HW 
-
-//1
-const a = 7;
-const b = 9;
-const result = a * b;
+console.log("🚀 ~ t12 ~ result:", result);
+console.log("🚀 ~ t12 ~ result:", result);
 console.log("🚀 ~ result:", result);
 
 //2
+const out2 = document.querySelector(".out-2");
 const c = 7;
 const d = 9;
-const out2 = document.querySelector(".out-2");
-console.log("🚀 ~ out2:", out2);
 out2.textContent = c / d;
+console.log("🚀 ~ out2:", out2);
 
 //3
 const e = 3;
 const f = 5;
 const out3 = document.querySelector(".out-3");
-console.log("🚀 ~ out3:", out3);
 out3.textContent = e + f;
+console.log(out3);
+
+/*   ()
+{ }
+[]
+
+zeichenb kette
+string
+"abc"
+zeichen char
+'a'
+
+ */
 
 //4
-const e1 = 3;
+const e1 = "3";
 const f1 = 5;
 const out4 = document.querySelector(".out-4");
-console.log("🚀 ~ out4:", out4);
 out4.textContent = e1 + f1;
+console.log("🚀 ~ out4:", out4);
 
 //5
 const e2 = 3;
@@ -112,15 +51,15 @@ out5.textContent = e2 / f2;
 const e3 = 3;
 const f3 = "Hello";
 const out6 = document.querySelector(".out-6");
-console.log("🚀 ~ out6:", out6);
 out6.textContent = e3 + f3;
+console.log("🚀 ~ out6:", out6);
 
 //7
 const e4 = 3;
 const f4 = "Hello";
 const out7 = document.querySelector(".out-7");
-console.log("🚀 ~ out7:", out7);
 out7.textContent = e4 * f4;
+console.log("🚀 ~ out7:", out7);
 
 //8
 const btn8 = document.querySelector(".b-8");
@@ -131,88 +70,96 @@ console.log("🚀 ~ out8:", out8);
 btn8.onclick = fn8;
 
 function fn8() {
-  console.log((out8.textContent = input8.value));
   out8.textContent = input8.value;
+  console.log("🚀 ~ fn8 ~ out8:", out8.textContent);
   input8.value = "";
 }
 
 //9
+
 const btn9 = document.querySelector(".b-9");
 const input9 = document.querySelector(".i-9");
 const out9 = document.querySelector(".out-9");
-console.log("🚀 ~ out9:", out9);
 
-btn9.onclick = t9;
+btn9.onclick = fn9;
 
-function t9() {
+function fn9() {
   out9.textContent = input9.value;
   input9.value = "";
 }
+
 //10
 
-//17
+const btn10 = document.querySelector(".b-10");
+const input10 = document.querySelector(".i-10");
+const out10 = document.querySelector(".out-10");
 
-function t17() {
-  // 1. Отримуємо значення з інпуту
-  let data = document.querySelector(".i-17").value;
+btn10.onclick = t10;
 
-  // 2. Перетворення різними способами
-  let res1 = Number(data); // Суворе перетворення
-  let res2 = parseInt(data); // Ціле число (ігнорує текст в кінці)
-  let res3 = parseFloat(data); // Число з комою (ігнорує текст в кінці)
+/* function t10() {
+  out10.textContent = input10.value * 20;
+  console.log("🚀 ~ t10 ~ out10:", out10);
+} */
 
-  // 3. Виведення результатів
-  document.querySelector(".out-17-1").innerHTML = res1;
-  document.querySelector(".out-17-2").innerHTML = res2;
-  document.querySelector(".out-17-3").innerHTML = res3;
+function t10() {
+  let peter = input10.valueAsNumber;
+
+  let multiplikationMit20 = peter * 20;
+  out10.textContent = multiplikationMit20;
 }
 
-//18
+//11
+const btn11 = document.querySelector(".b-11");
+const out11 = document.querySelector(".out-11");
+const input11 = document.querySelector(".i-11");
 
-document.querySelector(".b-18").onclick = t18;
-const a1 = document.querySelector(".i-18");
+btn11.onclick = t11;
 
-function t18() {
-  document.querySelector(".out-18").textContent = parseFloat(a1.value);
-}
-//19
-document.querySelector(".b-19").onclick = t19;
-const a2 = document.querySelector(".i-19-1");
-const b2 = document.querySelector(".i-19-2");
-
-function t19() {
-  document.querySelector(".out-19").textContent = +a2.value + +b2.value;
+function t11() {
+  let inputValue = input11.valueAsNumber;
+  let addition = inputValue + 55;
+  out11.textContent = addition;
 }
 
-//20
-/* const btn20 = document.querySelector(".b-20").onclick = t20;
+//12
+const btn12 = document.querySelector(".b-12");
+const input121 = document.querySelector(".i-12-1");
+const input122 = document.querySelector(".i-12-2");
+const out12 = document.querySelector(".out-12");
+btn12.onclick = t12;
 
+function t12() {
+  //  "Hello Nataliia Bulavina"
+  const firstName = input121.value;
+  const secondName = input122.value;
 
-let i = 0;
+  /*   let result = "Hello " + firstName + " "+ secondName;
+  out12.textContent = result;
+  console.log("🚀 ~ t12 ~ out12:", out12) */
 
-function t20() {
-  document.querySelector(".out-20").textContent = ++i;
-}
- */
-
-// 1. Створюємо змінну для підрахунку
-let count = 0;
-
-// 2. Знаходимо кнопку та блок для виводу
-const btn20 = document.querySelector('.b-20');
-const out20 = document.querySelector('.out-20');
-
-// 3. Створюємо функцію
-function f20() {
-    // Збільшуємо лічильник
-    count = count + 1; // або скорочено: count++;
-    
-    // Виводимо результат на сторінку
-    out20.textContent = count;
+  let result = "Hello " + firstName + " " + secondName;
+  out12.textContent = result;
+  console.log("🚀 ~ t12 ~ out12:", out12);
 }
 
-// 4. Призначаємо подію 'click' на кнопку
-btn20.onclick = f20;
+//13
+const btn13 = document.querySelector(".b-13");
+const input131 = document.querySelector(".i-13-1");
+const input132 = document.querySelector(".i-13-2");
+const out13 = document.querySelector(".out-13");
 
+btn13.onclick = t13;
 
+function t13() {
+  let a = parseFloat(input131.value);
+  let b = parseFloat(input132.value);
+  let sum = a + b;
+  console.log("🚀 ~ t13 ~ sum:", sum);
+  out13.textContent = sum;
 
+  /*   out13.textContent =
+    parseFloat(document.querySelector(".i-13-1").value) +
+    parseFloat(document.querySelector(".i-13-2").value); */
+}
+
+//14
