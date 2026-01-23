@@ -1,21 +1,69 @@
-// Task 1
 // При натисканні кнопки .b-1 спрацьовує функція f1. Функція повинна прочитати вміст .i-1 і порівняти його з числом 4 (порівняння ==). Результат порівняння - true або false виведіть у .out-1.
-
+function t1() {
+  document.querySelector(".out-1").textContent =
+    document.querySelector(".i-1").value == 4;
+}
+document.querySelector(".b-1").onclick = t1;
 // Task 2
 // Дані дві змінні a21 і a22. При натисканні кнопки .b-2, запускається функція f2. Функція повинна порівняти змінні за допомогою if else і вивести в .out-2 число, яке більше. Варіант рівності змінних не розглядаємо.
 
-let a21 = 45;
+let a21 = 12;
 let a22 = 32;
-
+function t2() {
+  if (a21 > a22) {
+    document.querySelector(".out-2").textContent = a21;
+  } else {
+    document.querySelector(".out-2").textContent = a22;
+  }
+}
+document.querySelector(".b-2").onclick = t2;
 // Task 3
 // Дані 2 input - .i-31 і .i-32, обидва - input[type=number]. При натисканні кнопки .b-3 спрацьовує функція f3. Функція повинна порівняти числа з input, вивести в .out-3 більше число.
 // Проведіть самостійний тест роботи, введіть пари чисел 4 і 9, 9 і 22, 5 і 111.
 
+function t3() {
+  if (
+    Number(document.querySelector(".i-31").value) >
+    Number(document.querySelector(".i-32").value)
+  ) {
+    document.querySelector(".out-3").textContent =
+      document.querySelector(".i-31").value;
+  } else {
+    document.querySelector(".out-3").textContent =
+      document.querySelector(".i-32").value;
+  }
+}
+document.querySelector(".b-3").onclick = t3;
+
 // Task 4.
 // Користувач вводить в .i-4 рік свого народження. Є кнопка .b-4, яка запускає функцію f4. Функція повинна вивести в .out-4 число 1, якщо користувачеві більше або дорівнює 18 років, і 0, якщо менше.
 
+function t4() {
+  if (2026 - Number(document.querySelector(".i-4").value) >= 18) {
+    document.querySelector(".out-4").textContent = 1;
+  } else {
+    document.querySelector(".out-4").textContent = 0;
+  }
+}
+document.querySelector(".b-4").onclick = t4;
+
 // Task 5.
 // На сторінці є input з класом i-5, куди користувач може ввести число. Є кнопка b-5, яка запускає функцію f5. Функція повинна вивести в .out-5 символ 'm' - якщо число менше нуля, 0 - якщо число дорівнює нулю, і число 1 - якщо більше.
+
+function t5() {
+  const input = Number(document.querySelector(".i-5").value);
+  const output = document.querySelector(".out-5");
+
+  if (input < 0) {
+    output.textContent = "m";
+  } else if (input === 0) {
+    output.textContent = 0;
+  } else {
+    output.textContent = 1;
+  }
+}
+
+document.querySelector(".b-5").onclick = t5;
 
 // Task 6.
 // На сторінці є input з класом i-6, куди користувач може ввести число. Є кнопка .b-6, яка запускає функцію f6. Функція повинна вивести в .out-6 слово even, якщо число парне, і odd, якщо непарне. Для перевірки парності використовується цілочисельна остача від ділення на 2 (оператор %). Якщо остача дорівнює нулю - парне, ні - непарне.
@@ -26,12 +74,47 @@ let a22 = 32;
 // Task 8.
 // Дано select s-8, який містить 3 значення: 1, 2, 3. Дана кнопка b-8. При її натисканні спрацьовує функція f8. Функція повинна отримати обране в select число, потім за допомогою switch case порівняти його по черзі з 1, 2, 3. І якщо вибрано число 1, то вивести в .out-8 рядок one, якщо 2 - two, якщо 3 - three. Нагадую - це програмування. Як зазначено в завданні - так і виводимо. Тобто Three з великої літери - помилка!
 
+function f8() {
+  const input = Number(document.querySelector(".s-8").selectedOptions[0].value);
+  switch (input) {
+    case 1:
+      document.querySelector(".out-8").textContent = "one";
+      break;
+    case 2:
+      document.querySelector(".out-8").textContent = "two";
+      break;
+    default:
+      document.querySelector(".out-8").textContent = "three";
+      break;
+  }
+}
+document.querySelector(".b-8").onclick = f8;
+
 // Task 9
 // Є input з класом .i-9, куди користувач може ввести номер квартири. Є кнопка .b-9, яка запускає функцію f9. Функція повинна вивести в .out-9 номер під'їзду, в якому знаходиться квартира.
 //  якщо від 1 включно до 32 включно - то вивести цифру 1
 //  якщо від 33 (включно) до 43 (включно) - то вивести 2
 //  якщо від 44 (включно) до 64 (включно) - то 3.
 //  В іншому випадку, вивести 0.
+
+function f9() {
+  const input = Number(document.querySelector(".i-9").value);
+
+  if (input <= 0 || input > 64) {
+    document.querySelector(".out-9").textContent = 0;
+  } else {
+    if (input >= 1 && input <= 32) {
+      document.querySelector(".out-9").textContent = 1;
+    } else {
+      if (input >= 33 && input <= 43) {
+        document.querySelector(".out-9").textContent = 2;
+      } else {
+        document.querySelector(".out-9").textContent = 3;
+      }
+    }
+  }
+}
+document.querySelector(".b-9").onclick = f9;
 
 // Task 10
 // Дано select .s-100. Після натискання кнопки, виведіть value обраного option в .out-10.
